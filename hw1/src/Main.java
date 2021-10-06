@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         Course c = new Course(new Course.Barrier[]{
                 new Course.Barrier("200 meters to run", true, false, false),
                 new Course.Barrier("400 meters to swim", false, true, false),
