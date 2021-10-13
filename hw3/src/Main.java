@@ -1,7 +1,27 @@
 import java.util.Arrays;
 
 public class Main {
+    public static void arrayReplacer(Object[] array, int firstIndex, int secondIndex) {
+        if (firstIndex < 0 || firstIndex >= array.length
+                || secondIndex < 0 || secondIndex >= array.length) {
+            System.out.println("Elements indexes must be in array length!");
+            return;
+        }
+        Object firstElement = array[firstIndex];
+        array[firstIndex] = array[secondIndex];
+        array[secondIndex] = firstElement;
+    }
+
     public static void main(String[] args) {
+        System.out.println("Task1");
+        String[] testArray = new String[]{"first", "second", "third", "last"};
+        System.out.println(Arrays.toString(testArray));
+        arrayReplacer(testArray, 0, 3);
+        System.out.println(Arrays.toString(testArray));
+        arrayReplacer(testArray, 2, 4);
+        System.out.println(Arrays.toString(testArray));
+        System.out.println();
+        System.out.println("Task2");
         Box<Apple> boxWithApples1 = new Box<>();
         Box<Apple> boxWithApples2 = new Box<>(Arrays.asList(
                 new Apple(),
