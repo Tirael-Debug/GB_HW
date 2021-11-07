@@ -69,7 +69,7 @@ public class Main {
         System.out.println("\nTask2:");
         System.out.println(mostInquisitiveStudents(students).stream()
                 .map(student -> student.getName() + ": " + student.getAllCourses().size())
-                .collect(Collectors.joining(" courses ", "The most inquisitive students: ", "")));
+                .collect(Collectors.joining(" courses, ", "The most inquisitive students: ", " courses")));
 
         System.out.println("\nTask3:");
         System.out.println(studentsOfTheCourse(students, new HwCourse("Biology")).stream()
